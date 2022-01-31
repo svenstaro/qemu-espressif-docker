@@ -9,10 +9,9 @@ RUN pacman -Sy --confirm git && \
         --disable-capstone --disable-vnc \
         --disable-sdl --disable-gtk && \
     ninja -C build && \
-    mv build/qemu-system-xtensa / && \
+    mv build/qemu-system-xtensa /usr/bin/qemu-system-xtensa && \
     cd .. && \
     rm -rf qemu && \
     pacman -Rsn --confirm git && \
     pacman -Scc --confirm
-COPY /qemu-system-xtensa /usr/bin/qemu-system-xtensa
 ENTRYPOINT /usr/bin/qemu-system-xtensa
