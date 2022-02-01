@@ -1,5 +1,5 @@
 FROM docker.io/archlinux:base-devel
-RUN pacman -Sy --confirm git && \
+RUN pacman -Sy --noconfirm git python ninja pixman libgcrypt && \
     git clone https://github.com/espressif/qemu.git && \
     cd qemu && \
     ./configure --target-list=xtensa-softmmu \
@@ -12,6 +12,6 @@ RUN pacman -Sy --confirm git && \
     mv build/qemu-system-xtensa /usr/bin/qemu-system-xtensa && \
     cd .. && \
     rm -rf qemu && \
-    pacman -Rsn --confirm git && \
-    pacman -Scc --confirm
+    pacman -Rsn --noconfirm git && \
+    pacman -Scc --noconfirm
 ENTRYPOINT /usr/bin/qemu-system-xtensa
