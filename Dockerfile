@@ -3,11 +3,8 @@ RUN pacman -Sy --noconfirm git python ninja pixman libgcrypt && \
     git clone https://github.com/espressif/qemu.git && \
     cd qemu && \
     ./configure --target-list=xtensa-softmmu \
-    --enable-gcrypt \
-    --enable-debug --enable-sanitizers \
-        --disable-strip --disable-user \
-        --disable-capstone --disable-vnc \
-        --disable-sdl --disable-gtk && \
+    --enable-gcrypt --disable-strip --disable-user --disable-capstone \
+    --disable-vnc --disable-sdl --disable-gtk && \
     ninja -C build && \
     mv build/qemu-system-xtensa /usr/bin/qemu-system-xtensa && \
     cd .. && \
