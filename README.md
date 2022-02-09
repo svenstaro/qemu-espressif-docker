@@ -6,11 +6,11 @@ See also https://github.com/espressif/qemu/wiki
 ## How to use this
 It's recommended that you just use the image directly from Docker Hub like so:
 
-    docker run docker.io/svenstaro/qemu-espressif
+    docker run docker.io/svenstaro/qemu-espressif qemu-system-xtensa
 
 or
 
-    podman run docker.io/svenstaro/qemu-espressif
+    podman run docker.io/svenstaro/qemu-espressif qemu-system-xtensa
 
 ## How to build
 If you actually want to build this yourself you can easily do so.

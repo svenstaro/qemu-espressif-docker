@@ -11,4 +11,4 @@ RUN pacman -Sy --noconfirm git python ninja pixman libgcrypt && \
     rm -rf qemu && \
     pacman -Rsn --noconfirm git && \
     pacman -Scc --noconfirm
-ENTRYPOINT /usr/bin/qemu-system-xtensa
+ENTRYPOINT /bin/bash
