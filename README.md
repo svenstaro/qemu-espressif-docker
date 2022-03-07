@@ -1,5 +1,5 @@
 # qemu-espressif-docker
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/svenstaro/qemu-espressif-docker)](https://cloud.docker.com/repository/docker/svenstaro/qemu-espressif/)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/svenstaro/qemu-espressif)](https://cloud.docker.com/repository/docker/svenstaro/qemu-espressif/)
 
 A container image containing the qemu fork of espressif to add support for the xtensa architecture.
 
